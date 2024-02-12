@@ -6,9 +6,9 @@ Description: Containerized MQTT broker for use with ctrlX CORE. Automates genera
 
 Instructions:
 
-1. Install docker and [configure buildx](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+1. Install docker (sudo snap install docker) and [configure buildx](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 2. Add user to [docker group](https://docs.docker.com/engine/install/linux-postinstall/)
-3. Running docker-setup.sh will do this for you but will require a restart of the app build environment.
+3. Running docker_setup.sh will do this for you but will require a restart of the app build environment.
 4. Run build_all.sh, passing target architecture as an argument (Ex. ./scripts/build_all.sh "arm64")
 5. Install Container Engine app on ctrlX CORE or ctrlX CORE Virtual
 6. Install built ctrlx-docker-mosquitto-interface snap on ctrlX CORE or ctrlX CORE Virtual
