@@ -15,5 +15,13 @@ sudo apt-get update
 # Install docker packages
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+# Create docker group
+sudo groupadd docker
+
 # Add user to docker group
 sudo usermod -aG docker $USER
+
+# Configure cross platform build
+sudo apt install -y qemu-user-static binfmt-support
+
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
